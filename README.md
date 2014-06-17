@@ -29,4 +29,5 @@ into the same workspace that contains the  W5-A4-Android project.
 NullWeakReferenceIsLoggedButNotCalled, and GarbageCollectedWeakReferenceIsLogged 
 in AndroidPlatformStrategyTest. In fact, AndroidPlatformStrategy should probably throw rather than log.
 
- 
+\5. When you first run the test from within Eclipse, you may have to specify the Eclipse JUnit test runner, 
+and the Junit4  test runner.
