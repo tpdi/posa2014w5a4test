@@ -18,7 +18,7 @@ junit classpath entry. If your Andorid sdk setup is the same as mine, you won't 
 
 Unfortunately, I can't find a good, portable way to reference android.jar; 
 adding the android Classpath Container doesn't work, because javanature projects apparently 
-don't read the android project.proerities file to find the android version.
+don't read the android project.properties file to find the android version.
 
 \3. Reference your W5-A4-Android project in the .classpath file.
 
