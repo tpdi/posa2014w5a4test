@@ -14,11 +14,11 @@ You need the zip powermock-mockito-junit-1.5.5.zip
 
 \2. Link to a copy of the android.jar in your Android by editing the .classpath file in
 the same directory as this read.me. Please note that the android.jar must come AFTER the
-junit classpath entry. If your Andorid sdk setup is the same as mine, you won't need to edit this.
+junit classpath entry. If your Android sdk setup is the same as mine, you won't need to edit this.
 
 Unfortunately, I can't find a good, portable way to reference android.jar; 
 adding the android Classpath Container doesn't work, because javanature projects apparently 
-don't read the android project.proerities file to find the android version.
+don't read the android project.properties file to find the android version.
 
 \3. Reference your W5-A4-Android project in the .classpath file.
 
