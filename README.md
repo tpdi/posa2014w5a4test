@@ -12,6 +12,8 @@ A zip file containing all those jars can be can be found at:
 https://code.google.com/p/powermock/wiki/Downloads?tm=2
 You need the zip powermock-mockito-junit-1.5.5.zip
 
+Don't add the zip as an external jar. Unzip the zip into the lib directory.
+
 \2. Link to a copy of the android.jar in your Android by editing the .classpath file in
 the same directory as this read.me. Please note that the android.jar must come AFTER the
 junit classpath entry. If your Android sdk setup is the same as mine, you won't need to edit this.
