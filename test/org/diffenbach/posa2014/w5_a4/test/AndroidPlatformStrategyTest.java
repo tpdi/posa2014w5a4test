@@ -66,16 +66,28 @@ public class AndroidPlatformStrategyTest {
      *  the ctor, and when WeakReference.get() is called.
      *  
      *  This test depends on your having defined public static final error 
-     *  messages in AndroidPlatformStrategy.
+     *  messages in AndroidPlatformStrategy. 
+     *  
+     *  It will test that you don't try to dereference a null Activity.
+     *  To also test that nulls are logged (not a requirement of the
+     *  assignment), uncomment the lines that define the log messages.
      */
     
     @Test // check one Activity that is always null
     public void NullWeakReferenceIsLoggedButNotCalled() {
     	checkNullWeakReference(new AndroidPlatformStrategy(null, null),
     			new String[]{
-					AndroidPlatformStrategy.OUTPUT_IS_NULL,
-					AndroidPlatformStrategy.ACTIVITYPARAM_IS_NULL,
-					AndroidPlatformStrategy.ACTIVITY_IS_NULL
+    		
+    		
+    // uncomment these lines to actually test something
+    // note, uncommenting will cause compilation errors
+    // unless you've changed AndroidPlatformStrategy
+    // to have the referenced public static strings
+    		
+    		
+					//AndroidPlatformStrategy.OUTPUT_IS_NULL,
+					//AndroidPlatformStrategy.ACTIVITYPARAM_IS_NULL,
+					//AndroidPlatformStrategy.ACTIVITY_IS_NULL
     	});
     }
     
@@ -94,8 +106,8 @@ public class AndroidPlatformStrategyTest {
     public void GarbageCollectedWeakReferenceIsLogged() {
     	checkNullWeakReference(new AndroidPlatformStrategy(null, PowerMockito.mock(Activity.class)), 
     			new String[]{
-					AndroidPlatformStrategy.OUTPUT_IS_NULL,
-					AndroidPlatformStrategy.ACTIVITY_IS_NULL
+					//AndroidPlatformStrategy.OUTPUT_IS_NULL,
+					//AndroidPlatformStrategy.ACTIVITY_IS_NULL
 		});
     }
     
